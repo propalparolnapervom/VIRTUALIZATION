@@ -1,9 +1,8 @@
 
+VAGRANT MAINTENANCE
+                
+                
 
-                ### VAGRANT MAINTENANCE ###
-                
-                
-# INSTALL: Download
 
   https://www.vagrantup.com/downloads.html
   
