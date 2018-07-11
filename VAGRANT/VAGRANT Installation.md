@@ -1,5 +1,5 @@
 
-# VAGRANT MAINTENANCE
+# VAGRANT INSTALLATION
                 
 ### Installation
 
