@@ -1,8 +1,8 @@
 
 # VAGRANT MAINTENANCE
                 
-**Download necessary install file**   
-[Vagrant install file](https://www.vagrantup.com/downloads.html)
+**Download necessary [Vagrant install file](https://www.vagrantup.com/downloads.html)**   
+
 
   
   
