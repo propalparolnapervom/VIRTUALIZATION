@@ -3,9 +3,9 @@
                 
 # Installation
 
-1. Download necessary [Vagrant install file](https://www.vagrantup.com/downloads.html)
+1. Download necessary [Vagrant Install File](https://www.vagrantup.com/downloads.html)
 
-2. Install 
+2. Install it
 
 
   
