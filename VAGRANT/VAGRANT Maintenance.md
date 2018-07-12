@@ -1,7 +1,8 @@
 ## VAGRANT MAINTENANCE
 
+### Which Vagrant env is going to be maintained
 
-**Go to the Vagrant root dir**
+**ALL commands have to be run from Vagrant root dir for necessary Vagrant env**
 
 ```
 cd C:\Users\sergii.burtovyi\vagrant_root
@@ -15,12 +16,20 @@ dir
       12-Jul-18  17:05             3,092 Vagrantfile
 ```
 
+### Maintenance commands to be run for previously chosen Vagrant env
+
 **Start Vagrant**
 
 Boot configured Vagrant env
 
 ```
 vagrant up
+```
+
+**Stop Vagrant**
+Terminate the use of any resources by the virtual machine
+```
+vagrant destroy
 ```
 
 **SSH to the Vagrant**
