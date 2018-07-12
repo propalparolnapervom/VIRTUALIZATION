@@ -40,6 +40,7 @@ vagrant destroy
 ### Login to Vagrant instance
 
 **Log in to the Vagrant instance**
+
 Make connection to Vagrant instance as ``vagrant`` user via ``ssh``
 ```
 vagrant ssh
