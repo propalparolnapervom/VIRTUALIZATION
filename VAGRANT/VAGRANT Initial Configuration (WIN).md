@@ -40,21 +40,26 @@ Vagrant file should be created
       12-Jul-18  13:02    <DIR>          .
       12-Jul-18  13:02    <DIR>          ..
       12-Jul-18  13:02             3,081 Vagrantfile
-                     1 File(s)          3,081 bytes
-                     2 Dir(s)  113,578,332,160 bytes free
 ```
 
 
 ### 2. Setup the Box
 Instead of building a virtual machine from scratch, which would be a slow and tedious process, Vagrant uses a base image (**Box**) to quickly clone a virtual machine.
 
-2.1. Choose the [Box](https://app.vagrantup.com/boxes/search) to be used.
+**2.1. Choose the [Box](https://app.vagrantup.com/boxes/search) to be used.**
 
-2.2. Configure the Project to use necessary Box as a base
+**2.2. Configure the Project to use necessary Box as a base**
+
+   **2.2.1. To download Box each time Vagrant starts**
+
+Just update Vagrantfile to point it to necessary Box. Chosen Box will be downloaded each time Vagrant starts.
+```
+vagrant init centos/7
+```
+
+   **2.2.2. To use downloaded Box**
      
-   2.2.1. To use downloaded Box
-     
-     
+Download the chosen Box. 
 ```
  vagrant box add ubuntu/trusty64
 
@@ -66,7 +71,19 @@ Instead of building a virtual machine from scratch, which would be a slow and te
                       box: Progress: 100% (Rate: 1596k/s, Estimated time remaining: --:--:--)
                   ==> box: Successfully added box 'ubuntu/trusty64' (v20180709.0.0) for 'virtualbox'!
 ```
-Open the Vagrantfile and change the contents to the following:
+
+The Box will be downloaded to ``%USERPROFILE%\.vagrant.d\boxes`` dir.
+```
+dir %USERPROFILE%\.vagrant.d\boxes
+
+    Directory of C:\Users\sergii.burtovyi\.vagrant.d\boxes
+
+   12-Jul-18  16:15    <DIR>          .
+   12-Jul-18  16:15    <DIR>          ..
+   12-Jul-18  16:15    <DIR>          ubuntu-VAGRANTSLASH-trusty64
+```
+
+Open the Vagrantfile and point it to just downloaded Box as following:
 ```
 Vagrant.configure("2") do |config|
   config.vm.box = "ubuntu/trusty64"
@@ -74,5 +91,4 @@ end
 ```
 
 
-   2.2.2. To download Box each time during Vagrant startup
 
