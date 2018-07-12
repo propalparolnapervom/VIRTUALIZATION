@@ -50,14 +50,14 @@ Instead of building a virtual machine from scratch, which would be a slow and te
 
 **2.2. Configure the Project to use necessary Box as a base**
 
-   **2.2.1. To download Box each time Vagrant starts**
+   **A) With Box downloading each time Vagrant starts**
 
 Just update Vagrantfile to point it to necessary Box. Chosen Box will be downloaded each time Vagrant starts.
 ```
 vagrant init centos/7
 ```
 
-   **2.2.2. To use downloaded Box**
+   **B) With pre-downloaded Box using**
      
 Download the chosen Box. 
 ```
@@ -90,5 +90,6 @@ Vagrant.configure("2") do |config|
 end
 ```
 
+**2.3. Vagrant can be started now**
 
 
