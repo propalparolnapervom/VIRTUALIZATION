@@ -23,7 +23,9 @@ dir
 
 **Start**
 
-Boot configured Vagrant env
+Boot configured Vagrant env.
+
+Based Box will be started (no changes from previous run will be available).
 
 ```
 vagrant up
@@ -31,7 +33,9 @@ vagrant up
 
 **Stop**
 
-Terminate the use of any resources by the virtual machine
+Terminates the use of any resources by the VM.
+
+All changes made during Vagrant env running will be lost.
 ```
 vagrant destroy
 ```
