@@ -1,10 +1,9 @@
 # VAGRANT MAINTENANCE
 
 
-## Which Vagrant instance is going to be maintained
+## Which Vagrant env is going to be maintained
 
 The one in which Vagrant root dir you are.
-So go to the necessary Vagrant root dir.
 
 ```
 cd C:\Users\sergii.burtovyi\vagrant_root
@@ -20,9 +19,9 @@ dir
 
 ## Maintenance commands to be run for previously chosen Vagrant env
 
-### Bouncing Vagrant instance
+### 1. Bouncing Vagrant env
 
-**Start Vagrant**
+**Start**
 
 Boot configured Vagrant env
 
@@ -30,23 +29,23 @@ Boot configured Vagrant env
 vagrant up
 ```
 
-**Stop Vagrant**
+**Stop**
 
 Terminate the use of any resources by the virtual machine
 ```
 vagrant destroy
 ```
 
-### Login to Vagrant instance
+### 2. Session to Vagrant env handling
 
-**Log in to the Vagrant instance**
+**Log in**
 
 Make connection to Vagrant instance as ``vagrant`` user via ``ssh``
 ```
 vagrant ssh
 ```
 
-**Log out from the Vagrant instance**
+**Log out**
 ```
 logout
 ```
