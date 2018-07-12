@@ -1,6 +1,6 @@
 ## VAGRANT INITIAL CONFIGURATION on Windows
 
-### Setup Project
+### 1. Setup Project
 The first step in configuring any Vagrant project is to create a [Vagrantfile](https://www.vagrantup.com/docs/vagrantfile/).
 The purpose of the Vagrantfile is twofold:
 1. Mark the root directory of your project;
@@ -43,3 +43,9 @@ dir
                      1 File(s)          3,081 bytes
                      2 Dir(s)  113,578,332,160 bytes free
 ```
+
+
+### 2. Setup Box
+Instead of building a virtual machine from scratch, which would be a slow and tedious process, Vagrant uses a base image (**Box**) to quickly clone a virtual machine.
+
+Choose the [Box](https://app.vagrantup.com/boxes/search) to be used.
