@@ -8,9 +8,9 @@ The purpose of the Vagrantfile is twofold:
 
 Go to any empty dir (or to the just created one):
 ```
-mkdir "C:\Users\sergii.burtovyi\vagrant_root"
-cd "C:\Users\sergii.burtovyi\vagrant_root"
-dir
+ mkdir "C:\Users\sergii.burtovyi\vagrant_root"
+ cd "C:\Users\sergii.burtovyi\vagrant_root"
+ dir
 
       Directory of C:\Users\sergii.burtovyi\vagrant_root
 
@@ -23,7 +23,7 @@ dir
 
 Initialize the dir for usage with Vagrant
 ```
-vagrant init
+ vagrant init
 
       A `Vagrantfile` has been placed in this directory. You are now
       ready to `vagrant up` your first virtual environment! Please read
@@ -33,7 +33,7 @@ vagrant init
 
 Vagrant file should be created
 ```
-dir
+ dir
 
       Directory of C:\Users\sergii.burtovyi\vagrant_root
 
@@ -45,7 +45,34 @@ dir
 ```
 
 
-### 2. Setup Box
+### 2. Setup the Box
 Instead of building a virtual machine from scratch, which would be a slow and tedious process, Vagrant uses a base image (**Box**) to quickly clone a virtual machine.
 
-Choose the [Box](https://app.vagrantup.com/boxes/search) to be used.
+2.1. Choose the [Box](https://app.vagrantup.com/boxes/search) to be used.
+
+2.2. Configure the Project to use necessary Box as a base
+     
+   2.2.1. To use downloaded Box
+     
+     
+```
+ vagrant box add ubuntu/trusty64
+
+                  ==> box: Loading metadata for box 'ubuntu/trusty64'
+                      box: URL: https://vagrantcloud.com/ubuntu/trusty64
+                  ==> box: Adding box 'ubuntu/trusty64' (v20180709.0.0) for provider: virtualbox
+                      box: Downloading: https://vagrantcloud.com/ubuntu/boxes/trusty64/versions/20180709.0.0/providers/virtualbox.box
+                      box: Download redirected to host: cloud-images.ubuntu.com--:--:--)
+                      box: Progress: 100% (Rate: 1596k/s, Estimated time remaining: --:--:--)
+                  ==> box: Successfully added box 'ubuntu/trusty64' (v20180709.0.0) for 'virtualbox'!
+```
+Open the Vagrantfile and change the contents to the following:
+```
+Vagrant.configure("2") do |config|
+  config.vm.box = "ubuntu/trusty64"
+end
+```
+
+
+   2.2.2. To download Box each time during Vagrant startup
+
