@@ -56,6 +56,17 @@ vagrant ssh
 logout
 ```
 
+### 3. Box handling
+
+**Download the Box**
+```
+vagrant box add ubuntu/trusty64
+```
+
+**Remove the Box**
+```
+vagrant box remove ubuntu/trusty64
+```
 
 
 
