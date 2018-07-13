@@ -58,7 +58,10 @@ Chosen Box will be downloaded during first Vagrant start (Vagrant doesn't find t
 ```
 vagrant init centos/7
 ```
-
+   OR
+```
+vagrant init centos/7 --box-version 1802.01
+```
    **B) With using of Box that was manualy pre-downloaded**
      
 Download the chosen Box. 
