@@ -50,14 +50,16 @@ Instead of building a virtual machine from scratch, which would be a slow and te
 
 **2.2. Configure the Project to use necessary Box as a base**
 
-   **A) With Box downloading each time Vagrant starts**
+   **A) With Box auto downloading first time Vagrant starts**
 
-Just update Vagrantfile to point it to necessary Box. Chosen Box will be downloaded each time Vagrant starts.
+Just update Vagrantfile to point it to necessary Box. 
+
+Chosen Box will be downloaded during first Vagrant start (Vagrant doesn't find the Box in ``%USERPROFILE%\.vagrant.d\boxes``, so downloads it; next time it finds the Box, so just starts).
 ```
 vagrant init centos/7
 ```
 
-   **B) With pre-downloaded Box using**
+   **B) With using of Box that was manualy pre-downloaded**
      
 Download the chosen Box. 
 ```
