@@ -48,6 +48,8 @@ Instead of building a virtual machine from scratch, which would be a slow and te
 
 **2.1. Choose the [Box](https://app.vagrantup.com/boxes/search) to be used.**
 
+The Boxes are namespaced: broken down into two parts - the username and the box name - separated by a slash.
+
 **2.2. Configure the Project to use necessary Box as a base**
 
    **A) With Box auto downloading first time Vagrant starts**
