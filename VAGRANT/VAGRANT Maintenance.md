@@ -36,6 +36,8 @@ vagrant up
 Terminates the use of any resources by the VM.
 
 All changes made during Vagrant env running will be lost.
+
+Doesn't delete the Box.
 ```
 vagrant destroy
 ```
