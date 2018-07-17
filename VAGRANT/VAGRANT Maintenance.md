@@ -21,6 +21,11 @@ dir
 
 ### 1. Bouncing Vagrant env
 
+**Status**
+```
+vagrant status
+```
+
 **Start**
 
 Boot configured Vagrant env.
@@ -41,6 +46,7 @@ Doesn't delete the Box.
 ```
 vagrant destroy
 ```
+
 
 ### 2. Session to Vagrant env handling
 
