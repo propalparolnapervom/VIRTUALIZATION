@@ -74,5 +74,16 @@ vagrant box add ubuntu/trusty64
 vagrant box remove ubuntu/trusty64
 ```
 
+### 4. Networking
+
+**IP of host machine as seen from Vagrant instance**
+```
+ip route sho
+
+       default via 10.0.2.2 dev eth0 proto dhcp metric 100
+```
+
+
+
 
 
