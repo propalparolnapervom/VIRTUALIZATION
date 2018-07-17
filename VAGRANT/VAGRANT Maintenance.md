@@ -18,14 +18,45 @@ dir
       12-Jul-18  17:05             3,092 Vagrantfile
 ```
 
-## Maintenance commands to be run for previously chosen Vagrant env
 
-### 1. Bouncing Vagrant env
+## Which Vagrant envs are running
+
+**Globally**
+```
+vagrant global-status
+
+       id       name    provider   state   directory
+       ------------------------------------------------------------------------
+       a6fa07b  default virtualbox running D:/overall/vagrant_project
+
+       The above shows information about all known Vagrant environments
+       on this machine. This data is cached and may not be completely
+       up-to-date (use "vagrant global-status --prune" to prune invalid
+       entries). To interact with any of the machines, you can go to that
+       directory and run Vagrant, or you can use the ID directly with
+       Vagrant commands from any directory. For example:
+       "vagrant destroy 1a2b3c4d"
+```
 
 **Status**
 ```
 vagrant status
+
+       Current machine states:
+
+       default                   running (virtualbox)
+
+       The VM is running. To stop this VM, you can run `vagrant halt` to
+       shut it down forcefully, or you can run `vagrant suspend` to simply
+       suspend the virtual machine. In either case, to restart it again,
+       simply run `vagrant up`.
 ```
+
+
+## Maintenance commands to be run for previously chosen Vagrant env
+
+### 1. Bouncing Vagrant env
+
 
 **Start**
 
