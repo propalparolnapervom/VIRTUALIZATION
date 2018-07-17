@@ -1,7 +1,9 @@
-## VAGRANT CONFIGURATION
+# VAGRANT CONFIGURATION
 
 
-**Define host name of Vagrant instance**
+## GUEST OS ITSELF (Linux, for example)
+
+**Define host name**
 ```
 Vagrant.configure("2") do |config|
   ...
@@ -26,6 +28,45 @@ end
 
 
 
+## VAGRANT ITSELF (Specific Vagrant instance)
+
+**Set the name of Vagrant instance**
+```
+Vagrant.configure("2") do |config|
+  ...
+  config.vm.define "not_default"
+  ...
+end
+```
+
+
+
+
+## VM ITSELF (VirtualBox, for example)
+
+[Documentation](https://www.virtualbox.org/manual/ch08.html#vboxmanage-modifyvm)
+
+**Set the name for VM itself**
+```
+Vagrant.configure("2") do |config|
+  ...
+  config.vm.provider "virtualbox" do |v|
+    v.name = "My First Test Vagrant VM"
+  end
+  ...
+end
+```
+
+**Set the memory of VM**
+```
+#The :id is the virtual machine’s ID, which needs to be passed to VBoxManage everytime we want to modify something VM specific. #Fortunately, Vagrant handles this for us, so we just need to pass this variable.
+
+Vagrant.configure("2") do |config|
+  ...
+  v.customize ["modifyvm", :id, "--memory", "1024"]
+  ...
+end
+```
 
 
 
