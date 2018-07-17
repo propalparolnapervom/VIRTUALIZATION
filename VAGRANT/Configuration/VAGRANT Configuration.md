@@ -1,5 +1,6 @@
 # VAGRANT CONFIGURATION
 
+[Useful link 1](https://www.sitepoint.com/vagrantfile-explained-setting-provisioning-shell/)
 
 ## GUEST OS ITSELF (Linux, for example)
 
