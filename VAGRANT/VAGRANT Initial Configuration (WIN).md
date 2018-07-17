@@ -1,5 +1,7 @@
 ## VAGRANT INITIAL CONFIGURATION on Windows
 
+**[Documentation](https://www.vagrantup.com/docs/)**
+
 ### 1. Setup Project
 The first step in configuring any Vagrant project is to create a [Vagrantfile](https://www.vagrantup.com/docs/vagrantfile/).
 The purpose of the Vagrantfile is twofold:
