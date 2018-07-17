@@ -22,6 +22,7 @@ dir
 ## Which Vagrant envs are running
 
 **Globally**
+This info from cache, so it might be not up-to-date.
 ```
 vagrant global-status
 
