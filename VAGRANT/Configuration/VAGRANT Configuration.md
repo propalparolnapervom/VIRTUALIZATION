@@ -76,6 +76,46 @@ end
 ```
 
 
+### PROVISIONING
+
+[Provisioning Documentation](https://www.vagrantup.com/docs/provisioning/)
+
+#### 1. SHELL
+
+Write shell command in line
+```
+Vagrant.configure("2") do |config|
+  ...
+  config.vm.provision "shell", inline: "echo hello"
+  ...
+end
+```
+
+Write shell commands in anonymous blocks
+```
+Vagrant.configure("2") do |config|
+  ...
+  config.vm.provision "shell" do |s|
+    s.inline = "echo hello"
+  end
+  ...
+end
+```
+
+Write shell commands in named blocks
+```
+Vagrant.configure("2") do |config|
+  ...
+  config.vm.provision "shell_block_name", type: "shell" do |s|
+    s.inline = "echo hello"
+  end
+  ...
+end
+```
+
+
+#### 2. ANSIBLE
+
 
 ## VAGRANT ITSELF (Specific Vagrant instance)
 
