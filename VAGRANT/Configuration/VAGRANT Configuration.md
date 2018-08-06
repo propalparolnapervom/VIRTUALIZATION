@@ -78,9 +78,11 @@ end
 
 ### PROVISIONING
 
-[Provisioning Documentation](https://www.vagrantup.com/docs/provisioning/)
+[Overall Provisioning Docs](https://www.vagrantup.com/docs/provisioning/)
 
 #### 1. SHELL
+
+[Shell Provisioning Docs](https://www.vagrantup.com/docs/provisioning/shell.html)
 
 Write shell command in line
 ```
@@ -102,7 +104,7 @@ Vagrant.configure("2") do |config|
 end
 ```
 
-Write shell commands in named blocks
+Write shell commands in named block
 ```
 Vagrant.configure("2") do |config|
   ...
@@ -113,6 +115,15 @@ Vagrant.configure("2") do |config|
 end
 ```
 
+Run external provisioning script in named block
+```
+ Vagrant.configure("2") do |config|
+  ...
+  config.vm.provision "shell_block_name", type: "shell", path: "script.sh"
+  ...
+end
+ 
+```
 
 #### 2. ANSIBLE
 
